@@ -19,7 +19,7 @@ function getInputedCountryData(data) {
   const { name, capital, flag, flags, languages, population} = data[0];
           const langs = `${Object.values(languages)}`;
           const populationCorrected = numberWithSpaces(population);
-          return inputedCountryData = { name, capital, flag, flags, langs, populationCorrected };
+          return { name, capital, flag, flags, langs, populationCorrected };
 }
 
 const searchByInputName = (event) => {
@@ -30,10 +30,10 @@ const searchByInputName = (event) => {
     if (textInput !== '') {
       fetchCountries(textInput)
         .then(data => {
-          getInputedCountryData(data);
+          const newData = getInputedCountryData(data);
           
           if (data.length === 1) {
-            countryDescriptionBoxEl.innerHTML = createCountryCard(inputedCountryData)
+            countryDescriptionBoxEl.innerHTML = createCountryCard(newData)
           }
           
           if (data.length > 1 && data.length <= 10) {
