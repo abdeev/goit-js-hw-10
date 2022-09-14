@@ -19,16 +19,19 @@ body {
 }
 
 #search-box {
+  margin-left: 33%;
   box-shadow: 0px 10px 5px -7px rgba(0, 0, 0, 0.49);
   font: inherit;
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  border: none;
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 25%;
 }
 
 .country-info-header {
