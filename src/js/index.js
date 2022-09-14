@@ -57,7 +57,6 @@ const searchByInputName = (event) => {
     })
     .finally(() => {
       console.log("done your task, enter new country to field");
-      // inputCountryNameEl.value = '';
     });
     }
     
